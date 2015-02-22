@@ -33,14 +33,10 @@ colnames(xTrain) <- as.character(features$V2)
 # Merge the activities (y tables) to the measurements (x tables)
 test <- cbind(yTest, xTest)
 train <- cbind(yTrain, xTrain)
-# colnames(test)[1] <- "activity_code"
-# colnames(train)[1] <- "activity_code"
 
 # Merge the subject identifiers with the measurement data
 test <- cbind(subTest, test)
 train <- cbind(subTrain, train)
-# colnames(test)[1] <- "subject_id"
-# colnames(train)[1] <- "subject_id"
 
 # Merge the training and test data sets
 merged <- rbind(test,train)
