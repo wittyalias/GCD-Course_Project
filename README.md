@@ -41,7 +41,7 @@ The raw data used is composed of two index files (activity_labels.txt and featur
 
 ## How the script works
 
-This script was written in R version 3.1.1 and uses the dplyr package version 0.4.1.
+This script was written in R version 3.1.1 using the dplyr package version 0.4.1 on a Mac running OSX 10.10.2.
 
 The script assumes that the user has unzipped the UCI HAR Dataset, that it is in the current working directory, and that the files and folder structure of the zipped file are intact and unaltered. The script initially loads the files from the train and test subfolders, which contain an observed data file (x_.txt), a file that identifies the activities for each observation (y_.txt) and subject files that identify individual participants. The script also loads the activity_labels.txt file, which gives english descriptors to the activity identifiers, and the features.txt file, which provides variable identifiers for the observed data.  
 
