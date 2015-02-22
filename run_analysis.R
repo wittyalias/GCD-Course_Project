@@ -54,8 +54,8 @@ merged <- merged[,which(!duplicated(names(merged)))]
 mergedNames <- colnames(merged)
 
 # Get the names that relate to the mean or standard deviation
-stdevNamesInd <- grep("std()",mergedNames)
-meanNamesInd <- grep("mean()", mergedNames)
+stdevNamesInd <- grep("std()",mergedNames, ignoreCase = TRUE)
+meanNamesInd <- grep("mean", mergedNames, ignoreCase = TRUE)
 
 # Extract only those variables that are the mean or standard deviation
 merged <- merged[,c(1,2,stdevNamesInd, meanNamesInd)]
